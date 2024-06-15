@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <h1 class="centered-text">Mashov Average Calculator</h1>
+</head>
+<body>
+  <h3 id="display_name">Welcome, {user}!</h3>
+  
+  <div id="Average">(Average Grade Value)</div>
+  <br></br>
+
+  <svg width="250" height="250" viewBox="0 0 250 250">
+    <!-- SVG for the white circle background -->
+    <svg width="250" height="250" viewBox="0 0 250 250">
+        <circle cx="125" cy="125" r="110" fill="#016241" />
+    </svg>
+    
+    <!-- Main progress bar SVG -->
+    <svg width="250" height="250" viewBox="0 0 250 250" class="circular-progress">
+        <circle class="bg"></circle>
+        <circle class="fg"></circle>
+        <text x="50%" y="50%" text-anchor="middle" dy=".3em" class="progress-text"></text>
+    </svg>
+</svg>
+
+  <button id="myButton">Refresh</button>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+    "name": "Mashov calculator",
+    "version": "1.0",
+    "description": "Exams average calculator for mashov",
+    "manifest_version": 3,
+    "author": "NoamRTD",
+    "permissions": [
+        "cookies",
+        "tabs",
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Mashov calculator"
+    },
+	"host_permissions": [
+		"https://web.mashov.info/"
+	],
+	"icons": {
+		"16": "images/icons/16.png",
+		"32": "images/icons/32.png",
+		"64": "images/icons/64.png",
+		"128": "images/icons/128.png",
+		"256": "images/icons/256.png",
+		"512": "images/icons/512.png"
+	}
+}

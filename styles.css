@@ -1,0 +1,57 @@
+body {
+  width: 250px;
+  background-color: #1D3932;
+}
+.centered-text {
+text-align: center;
+}
+
+h1{color: white;}
+h2{color: white;}
+h3{color: white;}
+div{color: white;}
+
+.circular-progress {
+  --size: 250px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 20px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+  animation: progress-animation 3s linear forwards;
+}
+
+.circular-progress circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: round;
+}
+
+.circular-progress circle.bg {
+  stroke: #016241;
+}
+
+.circular-progress circle.fg {
+  transform: rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  transition: stroke-dasharray 3s linear 0s;
+  stroke: #00CC66;
+}
+
+.circular-progress text.progress-text {
+  font-size: 36px;
+  opacity: 0;
+  font-weight: bold;
+  transition: opacity 0.3s ease-in-out 1s; 
+  fill: white;
+}
+
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
